@@ -1,0 +1,13 @@
+[options]
+multilib = false
+picocrt = false
+atomic-ungetc = false
+thread-local-storage = false
+io-long-long = true
+format-default = integer
+includedir = picolibc/riscv64-unknown-elf/include
+libdir = picolibc/riscv64-unknown-elf/lib
+
+[properties]
+cross_file = ['/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/software/libc/cross.txt']
+
