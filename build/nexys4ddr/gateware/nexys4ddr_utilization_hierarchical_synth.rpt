@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Wed Feb  9 12:13:20 2022
+| Date         : Thu Feb 10 14:13:18 2022
 | Host         : gmojicar-Lenovo-YOGA-520-14IKB running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_synth.rpt
 | Design       : nexys4ddr
@@ -21,8 +21,8 @@ Table of Contents
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |        Instance       |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| nexys4ddr             |             (top) |       2980 |       2868 |     112 |    0 | 1940 |     26 |      0 |            2 |
-|   (nexys4ddr)         |             (top) |        205 |        189 |      16 |    0 |  530 |     14 |      0 |            0 |
+| nexys4ddr             |             (top) |       3156 |       3044 |     112 |    0 | 1946 |     26 |      0 |            2 |
+|   (nexys4ddr)         |             (top) |        451 |        435 |      16 |    0 |  530 |     14 |      0 |            0 |
 |   CamaraVGADriver     |   CamaraVGADriver |        471 |        463 |       8 |    0 |  196 |     12 |      0 |            2 |
 |     (CamaraVGADriver) |   CamaraVGADriver |          0 |          0 |       0 |    0 |    6 |      0 |      0 |            2 |
 |     Cam               |            OV7670 |        325 |        325 |       0 |    0 |  167 |      0 |      0 |            0 |
@@ -36,9 +36,7 @@ Table of Contents
 |     pcpi_mul          | picorv32_pcpi_mul |        331 |        331 |       0 |    0 |  255 |      0 |      0 |            0 |
 |   ruedas              |            ruedas |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |   servo_radar         |       servo_radar |         34 |         34 |       0 |    0 |   22 |      0 |      0 |            0 |
-|   ultrasonido         |       ultrasonido |        144 |        144 |       0 |    0 |   59 |      0 |      0 |            0 |
-|     (ultrasonido)     |       ultrasonido |        136 |        136 |       0 |    0 |   29 |      0 |      0 |            0 |
-|     freq1             |           divFreq |          8 |          8 |       0 |    0 |   30 |      0 |      0 |            0 |
+|   ultrasonido         |       ultrasonido |         74 |         74 |       0 |    0 |   65 |      0 |      0 |            0 |
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
 
 

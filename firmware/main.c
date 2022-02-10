@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h> 
 
 #include <irq.h>
 #include <uart.h>
@@ -75,6 +76,8 @@ static void help(void)
 	puts("led                             - led test");
 	puts("IR				- IR test");
 	puts("w				- wheels test");
+	puts("US			- ultrasound test");
+	puts("servo			- servo test");
 }
 
 static void reboot(void)
@@ -168,7 +171,7 @@ static void w_test(void){
 
 		state = infrarrojo();
 		ruedas_move_write(state);
-		delay_ms(1000);
+		delay_ms(500);
 		/*switch(state){
 			case 0: 
 				ruedas_move_write(0);
@@ -200,6 +203,77 @@ static void w_test(void){
 		}*/
 	}
 }
+/*
+static int ultraSound_test(void)
+{
+	unsigned int d = 0;	
+	bool done = false;
+        while(!(buttons_in_read()&1)){
+		ultrasonido_init_write(1);
+		delay_ms(2);
+		while(!done){
+			delay_ms(2);
+			done = ultrasonido_done_read();
+			delay_ms(2);
+			if(done == 1){
+				d=ultrasonido_dist_read();
+				printf("La distancia es %x \n",d);
+			}
+		}
+		
+		//ultrasonido_init_write(0);
+		}
+		return d;
+	
+	
+}*/
+
+static void ultraSound_test(void)
+{
+
+	unsigned int iniciar = 1;
+	unsigned int distancia = 0;
+	unsigned int done = 0; 
+	
+	ultrasonido_init_write(iniciar);
+	printf("Test de ultrasonido ... se interrumpe con el boton 1\n");
+	
+	delay_ms(10);
+	
+	
+	while(!(buttons_in_read()&1)){
+	
+	
+	iniciar = 0;
+	ultrasonido_init_write(iniciar);
+	
+	delay_ms(1000);
+	iniciar = 1;
+	ultrasonido_init_write(iniciar);
+	delay_ms(1000);
+	
+	distancia = ultrasonido_dist_read();
+	printf("distancia : %d \n",distancia);
+	done = ultrasonido_done_read();
+	printf("done : %d \n",done);
+	
+	delay_ms(1000);
+	
+	}
+
+
+
+}
+
+static void servo_test(void)
+{
+
+	servo_radar_ctr_write(0); //giro 180
+	delay_ms(1000);
+	servo_radar_ctr_write(1);//frente
+	delay_ms(1000);
+	servo_radar_ctr_write(2);//posición incial
+}
 
 static void console_service(void)
 {
@@ -219,6 +293,10 @@ static void console_service(void)
 		infrarrojo();
 	else if(strcmp(token, "w") == 0)
 		w_test();
+	else if(strcmp(token, "US") == 0)
+		ultraSound_test();
+	else if(strcmp(token, "servo") == 0)
+		servo_test();
 	prompt();
 }
 

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="44" Path="/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="321e43e42bf142079011e5ef77cbfec3"/>
+    <Option Name="Id" Val="e966332abeaf4676a3830216e18e007d"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -66,13 +66,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../module/verilog/motor/ruedas.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../module/verilog/radar/divFreq.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

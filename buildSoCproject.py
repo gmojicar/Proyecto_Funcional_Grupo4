@@ -29,7 +29,6 @@ class BaseSoC(SoCCore):
 
 		platform.add_source("module/verilog/infrarrojo/infrarrojo.v" )
 		platform.add_source("module/verilog/motor/ruedas.v" )
-		platform.add_source("module/verilog/radar/divFreq.v" )
 		platform.add_source("module/verilog/radar/servo_radar.v" )
 		platform.add_source("module/verilog/radar/ultrasonido.v" )
 		platform.add_source("module/verilog/VGA100/CamaraVGADriver.v" )
@@ -103,6 +102,6 @@ class BaseSoC(SoCCore):
 						
 		# Build --------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-	builder = Builder(BaseSoC())
+	builder = Builder(BaseSoC(),csr_csv="Soc_MemoryMap.csv")
 	builder.build()
 

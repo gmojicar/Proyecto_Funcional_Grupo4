@@ -8,7 +8,6 @@ set_msg_config -id {Common 17-55} -new_severity {Warning}
 
 read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/infrarrojo/infrarrojo.v}
 read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/motor/ruedas.v}
-read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/divFreq.v}
 read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/servo_radar.v}
 read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v}
 read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v}

@@ -24,14 +24,14 @@ main.o: main.c \
  /opt/Litex/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/string.h \
  /opt/Litex/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/strings.h \
  /opt/Litex/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/sys/string.h \
+ /opt/Litex/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.3.0/include/stdbool.h \
  /opt/Litex/litex/litex/soc/cores/cpu/picorv32/irq.h \
  /opt/Litex/litex/litex/soc/cores/cpu/picorv32/system.h \
  /home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/software/include/generated/csr.h \
  /home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/software/include/generated/soc.h \
  /opt/Litex/litex/litex/soc/software/include/hw/common.h \
  /opt/Litex/litex/litex/soc/software/libbase/uart.h \
- /opt/Litex/litex/litex/soc/software/libbase/console.h delay.h i2c.h \
- /opt/Litex/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.3.0/include/stdbool.h
+ /opt/Litex/litex/litex/soc/software/libbase/console.h delay.h
 
 /opt/Litex/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio/stdio.h:
 
@@ -83,6 +83,8 @@ main.o: main.c \
 
 /opt/Litex/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include/sys/string.h:
 
+/opt/Litex/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.3.0/include/stdbool.h:
+
 /opt/Litex/litex/litex/soc/cores/cpu/picorv32/irq.h:
 
 /opt/Litex/litex/litex/soc/cores/cpu/picorv32/system.h:
@@ -98,7 +100,3 @@ main.o: main.c \
 /opt/Litex/litex/litex/soc/software/libbase/console.h:
 
 delay.h:
-
-i2c.h:
-
-/opt/Litex/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/lib/gcc/riscv64-unknown-elf/8.3.0/include/stdbool.h:

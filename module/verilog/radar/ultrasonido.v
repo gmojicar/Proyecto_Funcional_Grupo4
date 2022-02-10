@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 25.06.2021 11:40:40
+// Create Date: 10.02.2022 12:09:12
 // Design Name: 
-// Module Name: ultraSound
+// Module Name: Ultra
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,63 +20,49 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ultrasonido(  input clk, 
-                    input init, 
-                    input echo,
-                    output reg trig,
-                    output reg [8:0] dist,
-                    output reg done);
+module ultrasonido(clk, trig, echo, dist, init, done);
+input init;
+input clk;
+input echo;
+output reg trig;
+output reg [8:0] dist;
+output reg done;
+reg [26:0] cont;
+reg [26:0] cont_t;
 
-reg [14:0]counter = 0;
-reg echoStart = 0;
-reg [1:0]status = 0;
-wire newCLK;
+initial begin 
+	cont = 0;
+	trig = clk;
+	dist = 0;
+	cont_t = 0;
+	done = 0;
+end
 
-// Clock de 1MHz para que el periodo sea de 1 us.
-divFreq freq1(clk, newCLK, 'd50);
-
-parameter Start = 0, Pulse = 'd1, Echo = 'd2;
-always @ (posedge newCLK)begin
-
-    case(status)
-        Start:  begin
-                    // Cuando init es 1, se colocan los registros en 0.
-                    if(init) begin
-                        done = 0;
-                        counter = 0;
-                        dist = 0;
-                        status = Pulse;
-                    end
-                end
-        Pulse:  begin
-                    // Trig se pone en 1 por 11 us, luego se coloca en 0.
-                    trig = 1'b1;
-                    counter = counter + 1'b1;
-                        if(counter == 'd11)begin
-                            trig = 0;
-                            counter = 0;
-                            status = Echo;
-                        end
-                end
-        Echo:   begin
-                    // Se espera a que echo sea 1, luego se contabiliza el tiempo hasta que echo sea 0.
-                      if(echo)begin
-                        echoStart = 1;
-                        counter = counter + 1'b1;
-                      end
-                      if(echo == 0 && echoStart == 1)begin
-                        
-                        // Si el contador es 0, se vuelve al estado anterior hasta que el resultado sea diferente a 0.
-                        if(counter == 0) status = Pulse;
-                        else begin
-                            // Se divide el contador entre 58 para encontrar la distancia
-                            dist = counter/'d58;
-                            status = Start;
-                            done = 1;
-                        end
-                      end
-                end
-    endcase 
+always @(posedge clk) begin
+if(init) begin
+	cont = cont + 1;
+	
+	if (cont<1024)
+		trig = 1'b1;
+	else begin
+		trig = 1'b0;
+		
+		if (echo == 1)begin
+			
+			cont_t = cont_t + 1;
+			dist = (cont_t*34/200_000);
+		
+			end
+		else if (echo == 0)begin
+			
+			cont_t = 0;
+			done = 1;
+			
+			end
+		end
+	end	
+	else cont = 0;
+		
 end
 
 endmodule
