@@ -76,8 +76,8 @@ static void help(void)
 	puts("led                             - led test");
 	puts("IR				- IR test");
 	puts("w				- wheels test");
-	puts("US			- ultrasound test");
-	puts("servo			- servo test");
+	//puts("US			- ultrasound test");
+	//puts("servo			- servo test");
 }
 
 static void reboot(void)
@@ -96,15 +96,27 @@ static int recibirForma(void)
 		
 }
 
+static int recibirColor(void)
+{
+
+		unsigned int Color = 0;
+
+		Color = VGA_Mapa_PromedioColor_read();
+
+		return Color;	
+		
+}
+
 static void led_test(void)
 {
 	unsigned int form = 0;
+	unsigned int col = 0;
 	printf("Test del los leds... se interrumpe con el botton 1\n");
 	while(!(buttons_in_read()&1)) {
 
 		form = recibirForma();
-
-		leds_out_write(form);
+		col = recibirColor()*8;
+		leds_out_write(form+col);
 	}
 	
 }
@@ -164,6 +176,130 @@ static int infrarrojo(void){
 }
 
 
+
+/*
+static int ultraSound_test(void)
+{
+	unsigned int d = 0;	
+	bool done = false;
+        while(!(buttons_in_read()&1)){
+		ultrasonido_init_write(1);
+		delay_ms(2);
+		while(!done){
+			delay_ms(2);
+			done = ultrasonido_done_read();
+			delay_ms(2);
+			if(done == 1){
+				d=ultrasonido_dist_read();
+				printf("La distancia es %x \n",d);
+			}
+		}
+		
+		//ultrasonido_init_write(0);
+		}
+		return d;
+	
+	
+}*/
+/*
+static void ultraSound_test(void)
+{
+
+	unsigned int iniciar = 1;
+	unsigned int distancia = 0;
+	unsigned int done = 0; 
+	
+	//ultrasonido_init_write(iniciar);
+	printf("Test de ultrasonido ... se interrumpe con el boton 1\n");
+	
+	delay_ms(10);
+	
+	
+	while(!(buttons_in_read()&1)){
+	
+	
+	iniciar = 0;
+	//ultrasonido_init_write(iniciar);
+	
+	delay_ms(1000);
+	iniciar = 1;
+	//ultrasonido_init_write(iniciar);
+	delay_ms(1000);
+	
+	distancia = ultrasonido_dist_read();
+	printf("distancia : %d \n",distancia);
+	done = ultrasonido_done_read();
+	printf("done : %d \n",done);
+	
+	delay_ms(1000);
+	
+	}
+
+
+
+}
+*/
+static void servo_test(int intersect)
+{
+	unsigned int grados = 0;
+	//unsigned int intersect = 0;
+	unsigned int distancia1=0;
+	unsigned int distancia2=0;
+	unsigned int distancia3=0;
+	//ultrasonido_init_write(0);
+	if(intersect == 3){
+		switch (grados)
+		{
+		case 0x00:
+			servo_radar_ctr_write(0);
+			delay_ms(1000);
+				distancia1 = ultrasonido_dist_read();
+				delay_ms(100);
+				printf("distancia 1: %d \n",distancia1);
+				distancia1 = 0;		
+			grados = 0x01;
+			delay_ms(1000);
+			
+		case 0x01:
+			servo_radar_ctr_write(1); 
+			//ultrasonido_init_write(1);
+			delay_ms(1000);
+			//ultrasonido_init_write(1);
+			//delay_ms(100);
+				distancia2 = ultrasonido_dist_read();
+				delay_ms(100);
+				//ultrasonido_init_write(0);
+				printf("distancia 2: %d \n",distancia2);
+				distancia2 = 0;
+			grados = 0x02;
+			delay_ms(1000);
+		case 0x02:
+			servo_radar_ctr_write(2);
+			//ultrasonido_init_write(1);
+			delay_ms(1000);
+			//ultrasonido_init_write(1);
+			//delay_ms(100);
+				distancia3 = ultrasonido_dist_read();
+				delay_ms(100);
+				//ultrasonido_init_write(0);
+				printf("distancia 3: %d \n",distancia3);
+				distancia3 = 0;
+			delay_ms(1000);
+			//return;
+			//break;
+		
+		default: grados = 0;
+			break;
+		}
+	}
+	else
+	{
+		servo_radar_ctr_write(2); 
+	}
+	
+
+}
+
 static void w_test(void){
 	unsigned int state = 3;
 	
@@ -172,6 +308,7 @@ static void w_test(void){
 		state = infrarrojo();
 		ruedas_move_write(state);
 		delay_ms(500);
+		servo_test(state);
 		/*switch(state){
 			case 0: 
 				ruedas_move_write(0);
@@ -201,78 +338,8 @@ static void w_test(void){
 				break; 
 
 		}*/
-	}
-}
-/*
-static int ultraSound_test(void)
-{
-	unsigned int d = 0;	
-	bool done = false;
-        while(!(buttons_in_read()&1)){
-		ultrasonido_init_write(1);
-		delay_ms(2);
-		while(!done){
-			delay_ms(2);
-			done = ultrasonido_done_read();
-			delay_ms(2);
-			if(done == 1){
-				d=ultrasonido_dist_read();
-				printf("La distancia es %x \n",d);
-			}
-		}
 		
-		//ultrasonido_init_write(0);
-		}
-		return d;
-	
-	
-}*/
-
-static void ultraSound_test(void)
-{
-
-	unsigned int iniciar = 1;
-	unsigned int distancia = 0;
-	unsigned int done = 0; 
-	
-	ultrasonido_init_write(iniciar);
-	printf("Test de ultrasonido ... se interrumpe con el boton 1\n");
-	
-	delay_ms(10);
-	
-	
-	while(!(buttons_in_read()&1)){
-	
-	
-	iniciar = 0;
-	ultrasonido_init_write(iniciar);
-	
-	delay_ms(1000);
-	iniciar = 1;
-	ultrasonido_init_write(iniciar);
-	delay_ms(1000);
-	
-	distancia = ultrasonido_dist_read();
-	printf("distancia : %d \n",distancia);
-	done = ultrasonido_done_read();
-	printf("done : %d \n",done);
-	
-	delay_ms(1000);
-	
 	}
-
-
-
-}
-
-static void servo_test(void)
-{
-
-	servo_radar_ctr_write(0); //giro 180
-	delay_ms(1000);
-	servo_radar_ctr_write(1);//frente
-	delay_ms(1000);
-	servo_radar_ctr_write(2);//posición incial
 }
 
 static void console_service(void)
@@ -293,10 +360,10 @@ static void console_service(void)
 		infrarrojo();
 	else if(strcmp(token, "w") == 0)
 		w_test();
-	else if(strcmp(token, "US") == 0)
-		ultraSound_test();
-	else if(strcmp(token, "servo") == 0)
-		servo_test();
+	//else if(strcmp(token, "US") == 0)
+	//	ultraSound_test();
+	//else if(strcmp(token, "servo") == 0)
+	//	servo_test();
 	prompt();
 }
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu Feb 10 14:13:19 2022
+| Date         : Thu Feb 10 20:04:37 2022
 | Host         : gmojicar-Lenovo-YOGA-520-14IKB running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file nexys4ddr_utilization_synth.rpt
 | Design       : nexys4ddr
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 3156 |     0 |     63400 |  4.98 |
-|   LUT as Logic             | 3044 |     0 |     63400 |  4.80 |
+| Slice LUTs*                | 3147 |     0 |     63400 |  4.96 |
+|   LUT as Logic             | 3035 |     0 |     63400 |  4.79 |
 |   LUT as Memory            |  112 |     0 |     19000 |  0.59 |
 |     LUT as Distributed RAM |  112 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 1946 |     0 |    126800 |  1.53 |
-|   Register as Flip Flop    | 1940 |     0 |    126800 |  1.53 |
+| Slice Registers            | 1944 |     0 |    126800 |  1.53 |
+|   Register as Flip Flop    | 1938 |     0 |    126800 |  1.53 |
 |   Register as Latch        |    6 |     0 |    126800 | <0.01 |
 | F7 Muxes                   |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     15850 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 6     |          Yes |           - |        Reset |
 | 143   |          Yes |         Set |            - |
-| 1797  |          Yes |       Reset |            - |
+| 1795  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,14 +152,14 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 1797 |        Flop & Latch |
-| LUT6       | 1111 |                 LUT |
-| LUT5       |  653 |                 LUT |
-| LUT2       |  580 |                 LUT |
-| LUT4       |  551 |                 LUT |
-| LUT3       |  443 |                 LUT |
+| FDRE       | 1795 |        Flop & Latch |
+| LUT6       | 1100 |                 LUT |
+| LUT5       |  622 |                 LUT |
+| LUT2       |  589 |                 LUT |
+| LUT4       |  580 |                 LUT |
+| LUT3       |  415 |                 LUT |
 | CARRY4     |  321 |          CarryLogic |
-| LUT1       |  278 |                 LUT |
+| LUT1       |  277 |                 LUT |
 | FDSE       |  143 |        Flop & Latch |
 | RAMD64E    |   96 |  Distributed Memory |
 | OBUF       |   32 |                  IO |
