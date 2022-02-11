@@ -20,19 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ultrasonido(clk, trig, echo, dist);
-//input init;
+module ultrasonido(clk, trig, echo, distancia, init, done);
+input init;
 input clk;
 input echo;
 output reg trig;
-output reg [8:0] dist;
-//output reg done;
+output reg [8:0] distancia;
+output reg done;
 reg [26:0] cont;
 reg [26:0] cont_t;
+reg [8:0] dist;
 
 
 always @(posedge clk) begin
-
+//if(!init) begin
+  //  cont = 0;
+	//dist = 0;
+	//cont_t = 0;
+//	done = 0;
+//end
 	cont = cont + 1;
 	
 	if (cont<1024)
@@ -44,15 +50,18 @@ always @(posedge clk) begin
 			
 			cont_t = cont_t + 1;
 			dist = (cont_t*34/200_000);
+			
+			
 		
 			end
 		else if (echo == 0)begin
-			
+			done = 1;
 			cont_t = 0;
-			
-			
+			distancia <= dist;
 			end
 		end
+
+		
 	
 end
 

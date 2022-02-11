@@ -76,7 +76,7 @@ static void help(void)
 	puts("led                             - led test");
 	puts("IR				- IR test");
 	puts("w				- wheels test");
-	//puts("US			- ultrasound test");
+	puts("US			- ultrasound test");
 	//puts("servo			- servo test");
 }
 
@@ -107,34 +107,24 @@ static int recibirColor(void)
 		
 }
 
-static void led_test(void)
+static int led_test(void)
 {
 	unsigned int form = 0;
 	unsigned int col = 0;
-	printf("Test del los leds... se interrumpe con el botton 1\n");
-	while(!(buttons_in_read()&1)) {
+	unsigned int img = 0;
+	//printf("Test del los leds... se interrumpe con el botton 1\n");
+	
+	//while(!(buttons_in_read()&1)) {
 
 		form = recibirForma();
 		col = recibirColor()*8;
-		leds_out_write(form+col);
-	}
-	
+		img = form+col;
+	//}
+	return img;
 }
+
+//Sigue blanco
 /*
-static void infra_test(void){
-
-	printf("Test de infra ... se interrumpe con el boton 1\n");
-
-	unsigned int seguidor = 0;
-
-	while(!(buttons_in_read()&1)) {
-		seguidor = infrarrojo_infras2_read();
-		printf("Infrarrojo: %x \n",seguidor);
-		delay_ms(1000);
-		}
-
-}*/
-
 static int infrarrojo(void){
    
 	unsigned int entrada = infrarrojo_infras2_read();
@@ -173,9 +163,94 @@ static int infrarrojo(void){
 	
 	return salida;
 
+}*/
+/*
+static int infrarrojo(void){
+   
+	unsigned int entrada = infrarrojo_infras2_read();
+	unsigned int salida=3;
+	
+	if((entrada == 0x1B)||(entrada == 0x1A)||(entrada == 0x19)||(entrada == 0x18)||(entrada == 0x13)||(entrada == 0x12)||(entrada == 0x11)||(entrada == 0x10)||(entrada == 0xB)||(entrada == 0xA)||(entrada == 0x9)||(entrada == 0x8)||(entrada == 0x3)||(entrada == 0x2)||(entrada == 0x1)||(entrada == 0x0)){
+		if ((entrada == 0x18)||(entrada == 0x10)||(entrada == 0x8))
+		{
+			salida = 2;
+			printf("Gire a la izquierda: %x \n",entrada);
+		}
+		else if ((entrada == 0x3)||(entrada == 0x2)||(entrada == 0x1))
+		{
+			salida = 1;
+			printf("Gire a la derecha: %x \n",entrada);
+		}
+		else if ((entrada == 0x0))
+		{
+			salida = 3;
+			printf("Pare: %x \n",entrada);
+		}
+		else
+		{
+			salida = 0;
+			printf("Siga: %x \n",entrada);
+		}
+		
+	}
+	else
+	{
+		salida = 3;
+			printf("Está quieto: %x \n",entrada);
+	}
+	
+	
+	
+	return salida;
+
+}*/
+
+
+static int infrarrojo(void){
+   
+	unsigned int entrada = infrarrojo_infras2_read();
+	unsigned int salida=3;
+	
+	if((entrada == 0x4)||(entrada == 0x5)||(entrada == 0x6)||(entrada == 0x7)||(entrada == 0xC)||(entrada == 0xD)||(entrada == 0xE)||(entrada == 0xF)||(entrada == 0x14)||(entrada == 0x15)||(entrada == 0x16)||(entrada == 0x17)||(entrada == 0x1C)||(entrada == 0x1D)||(entrada == 0x1E)||(entrada == 0x1F)){
+		if ((entrada == 0x7)||(entrada == 0xF)||(entrada == 0x17))
+		{
+			salida = 1;
+			printf("Gire a la derecha: %x \n",entrada);
+		}
+		else if ((entrada == 0x1C)||(entrada == 0x1D)||(entrada == 0x1E))
+		{
+			salida = 2;
+			printf("Gire a la izquierda: %x \n",entrada);
+		}
+		else if ((entrada == 0x1F))
+		{
+			salida = 3;
+			printf("Se salió: %x \n",entrada);
+		}
+		else
+		{
+			salida = 0;
+			printf("Siga: %x \n",entrada);
+		}
+		
+	}
+	else if (entrada == 0x00)
+	{
+		salida = 3;
+		printf("Intersección: %x \n",entrada);
+	}
+	
+	else
+	{
+		salida = 0;
+			printf("Está quieto: %x \n",entrada);
+	}
+	
+	
+	
+	return salida;
+
 }
-
-
 
 /*
 static int ultraSound_test(void)
@@ -201,44 +276,17 @@ static int ultraSound_test(void)
 	
 	
 }*/
-/*
+
 static void ultraSound_test(void)
 {
+	unsigned int distancia;
 
-	unsigned int iniciar = 1;
-	unsigned int distancia = 0;
-	unsigned int done = 0; 
-	
-	//ultrasonido_init_write(iniciar);
-	printf("Test de ultrasonido ... se interrumpe con el boton 1\n");
-	
-	delay_ms(10);
-	
-	
-	while(!(buttons_in_read()&1)){
-	
-	
-	iniciar = 0;
-	//ultrasonido_init_write(iniciar);
-	
-	delay_ms(1000);
-	iniciar = 1;
-	//ultrasonido_init_write(iniciar);
-	delay_ms(1000);
-	
-	distancia = ultrasonido_dist_read();
-	printf("distancia : %d \n",distancia);
-	done = ultrasonido_done_read();
-	printf("done : %d \n",done);
-	
-	delay_ms(1000);
-	
+		distancia = ultrasonido_distancia_read();	//distancia en centimetros
+		printf("distancia : %d \n",distancia);
+
 	}
 
 
-
-}
-*/
 static void servo_test(int intersect)
 {
 	unsigned int grados = 0;
@@ -253,7 +301,7 @@ static void servo_test(int intersect)
 		case 0x00:
 			servo_radar_ctr_write(0);
 			delay_ms(1000);
-				distancia1 = ultrasonido_dist_read();
+				//distancia1 = ultrasonido_distancia_read();
 				delay_ms(100);
 				printf("distancia 1: %d \n",distancia1);
 				distancia1 = 0;		
@@ -266,7 +314,7 @@ static void servo_test(int intersect)
 			delay_ms(1000);
 			//ultrasonido_init_write(1);
 			//delay_ms(100);
-				distancia2 = ultrasonido_dist_read();
+				//distancia2 = ultrasonido_dist_read();
 				delay_ms(100);
 				//ultrasonido_init_write(0);
 				printf("distancia 2: %d \n",distancia2);
@@ -279,7 +327,7 @@ static void servo_test(int intersect)
 			delay_ms(1000);
 			//ultrasonido_init_write(1);
 			//delay_ms(100);
-				distancia3 = ultrasonido_dist_read();
+				//distancia3 = ultrasonido_dist_read();
 				delay_ms(100);
 				//ultrasonido_init_write(0);
 				printf("distancia 3: %d \n",distancia3);
@@ -302,43 +350,18 @@ static void servo_test(int intersect)
 
 static void w_test(void){
 	unsigned int state = 3;
+	unsigned int cam = 0;
 	
 	while(!(buttons_in_read()&1)){
 
 		state = infrarrojo();
 		ruedas_move_write(state);
-		delay_ms(500);
+		delay_ms(12);
+		ruedas_move_write(3);
 		servo_test(state);
-		/*switch(state){
-			case 0: 
-				ruedas_move_write(0);
-				delay_ms(5000);
-				state = 1;
-				break;
-			case 1: 
-				ruedas_move_write(1);
-				delay_ms(5000);
-				state = 2;
-				break;
-			case 2: 
-				ruedas_move_write(2);
-				delay_ms(5000);
-				state = 3;
-				break;
-			case 3: 
-				ruedas_move_write(3);
-				delay_ms(5000);
-				state = 4;
-				break; 
-			case 4: 
-				ruedas_move_write(4);
-				delay_ms(5000);
-				ruedas_move_write(3);
-				return;
-				break; 
-
-		}*/
-		
+		cam = led_test();
+		leds_out_write(cam);
+		delay_ms(100);		
 	}
 }
 
@@ -360,8 +383,8 @@ static void console_service(void)
 		infrarrojo();
 	else if(strcmp(token, "w") == 0)
 		w_test();
-	//else if(strcmp(token, "US") == 0)
-	//	ultraSound_test();
+	else if(strcmp(token, "US") == 0)
+		ultraSound_test();
 	//else if(strcmp(token, "servo") == 0)
 	//	servo_test();
 	prompt();
@@ -373,7 +396,7 @@ int main(void)
 	irq_setie(1);
 	uart_init();
 
-	puts("\nSoC - RiscV project UNAL 2020-2-- CPU testing software built "__DATE__" "__TIME__"\n");
+	puts("\nSoC - RiscV project UNAL 2021-2-- CPU testing software built "__DATE__" "__TIME__"\n");
 	help();
 	prompt();
 

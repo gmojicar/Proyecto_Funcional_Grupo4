@@ -1,0 +1,420 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Feb 11 15:12:04 2022
+# Process ID: 30357
+# Current directory: /home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware
+# Command line: vivado -mode batch -source nexys4ddr.tcl
+# Log file: /home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/vivado.log
+# Journal file: /home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/vivado.jou
+#-----------------------------------------------------------
+source nexys4ddr.tcl
+# create_project -force -name nexys4ddr -part xc7a100t-CSG324-1
+# set_msg_config -id {Common 17-55} -new_severity {Warning}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/infrarrojo/infrarrojo.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/motor/ruedas.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/servo_radar.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/clk24_25_nexys4.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/DivisorFrecuencia.v}
+# add_files {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/Im.mem}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBuffer.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBufferv2.v}
+# add_files {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/Mapa.mem}
+# add_files {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/Mapa2.mem}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/OV7670.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/VGA_driver.v}
+# read_verilog {/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v}
+# read_verilog {/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v}
+# read_xdc nexys4ddr.xdc
+# set_property PROCESSING_ORDER EARLY [get_files nexys4ddr.xdc]
+# synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Command: synth_design -directive default -top nexys4ddr -part xc7a100t-CSG324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30403 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1914.324 ; gain = 202.715 ; free physical = 6266 ; free virtual = 13257
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'nexys4ddr' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:20]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:646]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:646]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:647]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:647]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:648]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:648]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:649]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:649]
+INFO: [Synth 8-3876] $readmem data file 'mem.init' is read successfully [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1968]
+INFO: [Synth 8-3876] $readmem data file 'mem_1.init' is read successfully [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1983]
+INFO: [Synth 8-3876] $readmem data file 'mem_2.init' is read successfully [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:2006]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1627]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1661]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1670]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1693]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1709]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1718]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1730]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1742]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1754]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1809]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1851]
+INFO: [Synth 8-6157] synthesizing module 'servo_radar' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/servo_radar.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'servo_radar' (1#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/servo_radar.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ultrasonido' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v:23]
+INFO: [Synth 8-4471] merging register 'distancia_reg[8:0]' into 'dist_reg[8:0]' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v:63]
+WARNING: [Synth 8-6014] Unused sequential element distancia_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'ultrasonido' (2#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/radar/ultrasonido.v:23]
+INFO: [Synth 8-6157] synthesizing module 'infrarrojo' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/infrarrojo/infrarrojo.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'infrarrojo' (3#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/infrarrojo/infrarrojo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ruedas' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/motor/ruedas.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ruedas' (4#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/motor/ruedas.v:23]
+INFO: [Synth 8-6157] synthesizing module 'CamaraVGADriver' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImBuffer' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBuffer.v:1]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 15 - type: integer 
+	Parameter imageFILE bound to: Im.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'Im.mem' is read successfully [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBuffer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'ImBuffer' (5#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBuffer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ImBufferv2' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBufferv2.v:1]
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter imageFILE bound to: Mapa.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'Mapa.mem' is read successfully [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBufferv2.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'ImBufferv2' (6#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/ImBufferv2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Driver640x480' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/VGA_driver.v:18]
+	Parameter SCREEN_X bound to: 640 - type: integer 
+	Parameter FRONT_PORCH_X bound to: 16 - type: integer 
+	Parameter SYNC_PULSE_X bound to: 96 - type: integer 
+	Parameter BACK_PORCH_X bound to: 28 - type: integer 
+	Parameter TOTAL_SCREEN_X bound to: 780 - type: integer 
+	Parameter SCREEN_Y bound to: 480 - type: integer 
+	Parameter FRONT_PORCH_Y bound to: 10 - type: integer 
+	Parameter SYNC_PULSE_Y bound to: 2 - type: integer 
+	Parameter BACK_PORCH_Y bound to: 33 - type: integer 
+	Parameter TOTAL_SCREEN_Y bound to: 525 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Driver640x480' (7#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/VGA_driver.v:18]
+INFO: [Synth 8-6157] synthesizing module 'OV7670' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/OV7670.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670' (8#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/OV7670.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk24_25_nexys4' [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/clk24_25_nexys4.v:69]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (9#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:39940]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 12.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 48.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 50 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (10#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:39940]
+INFO: [Synth 8-6155] done synthesizing module 'clk24_25_nexys4' (11#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/clk24_25_nexys4.v:69]
+WARNING: [Synth 8-7023] instance 'clk25_24' of module 'clk24_25_nexys4' has 5 connections declared, but only 4 given [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:75]
+INFO: [Synth 8-226] default block is never used [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:122]
+INFO: [Synth 8-226] default block is never used [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:132]
+WARNING: [Synth 8-567] referenced signal 'DataMapaOut' should be on the sensitivity list [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:84]
+WARNING: [Synth 8-567] referenced signal 'PromedioColor' should be on the sensitivity list [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:84]
+WARNING: [Synth 8-567] referenced signal 'Forma' should be on the sensitivity list [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'CamaraVGADriver' (12#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/module/verilog/VGA100/CamaraVGADriver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:62]
+	Parameter ENABLE_COUNTERS bound to: 1'b1 
+	Parameter ENABLE_COUNTERS64 bound to: 1'b1 
+	Parameter ENABLE_REGS_16_31 bound to: 1'b1 
+	Parameter ENABLE_REGS_DUALPORT bound to: 1'b1 
+	Parameter LATCHED_MEM_RDATA bound to: 1'b0 
+	Parameter TWO_STAGE_SHIFT bound to: 1'b1 
+	Parameter BARREL_SHIFTER bound to: 1'b0 
+	Parameter TWO_CYCLE_COMPARE bound to: 1'b0 
+	Parameter TWO_CYCLE_ALU bound to: 1'b0 
+	Parameter COMPRESSED_ISA bound to: 1'b0 
+	Parameter CATCH_MISALIGN bound to: 1'b1 
+	Parameter CATCH_ILLINSN bound to: 1'b1 
+	Parameter ENABLE_PCPI bound to: 1'b0 
+	Parameter ENABLE_MUL bound to: 1'b1 
+	Parameter ENABLE_FAST_MUL bound to: 1'b0 
+	Parameter ENABLE_DIV bound to: 1'b1 
+	Parameter ENABLE_IRQ bound to: 1'b1 
+	Parameter ENABLE_IRQ_QREGS bound to: 1'b1 
+	Parameter ENABLE_IRQ_TIMER bound to: 1'b1 
+	Parameter ENABLE_TRACE bound to: 1'b0 
+	Parameter REGS_INIT_ZERO bound to: 1'b0 
+	Parameter MASKED_IRQ bound to: 0 - type: integer 
+	Parameter LATCHED_IRQ bound to: -1 - type: integer 
+	Parameter PROGADDR_RESET bound to: 0 - type: integer 
+	Parameter PROGADDR_IRQ bound to: 16 - type: integer 
+	Parameter STACKADDR bound to: -1 - type: integer 
+	Parameter irq_timer bound to: 0 - type: integer 
+	Parameter irq_ebreak bound to: 1 - type: integer 
+	Parameter irq_buserror bound to: 2 - type: integer 
+	Parameter irqregs_offset bound to: 32 - type: integer 
+	Parameter regfile_size bound to: 36 - type: integer 
+	Parameter regindex_bits bound to: 6 - type: integer 
+	Parameter WITH_PCPI bound to: 1'b1 
+	Parameter TRACE_BRANCH bound to: 36'b000100000000000000000000000000000000 
+	Parameter TRACE_ADDR bound to: 36'b001000000000000000000000000000000000 
+	Parameter TRACE_IRQ bound to: 36'b100000000000000000000000000000000000 
+	Parameter cpu_state_trap bound to: 8'b10000000 
+	Parameter cpu_state_fetch bound to: 8'b01000000 
+	Parameter cpu_state_ld_rs1 bound to: 8'b00100000 
+	Parameter cpu_state_ld_rs2 bound to: 8'b00010000 
+	Parameter cpu_state_exec bound to: 8'b00001000 
+	Parameter cpu_state_shift bound to: 8'b00000100 
+	Parameter cpu_state_stmem bound to: 8'b00000010 
+	Parameter cpu_state_ldmem bound to: 8'b00000001 
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_mul' [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2192]
+	Parameter STEPS_AT_ONCE bound to: 1 - type: integer 
+	Parameter CARRY_CHAIN bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2223]
+INFO: [Synth 8-4471] merging register 'pcpi_ready_reg' into 'pcpi_wr_reg' [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2304]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_ready_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2304]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_mul' (13#1) [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2192]
+INFO: [Synth 8-6157] synthesizing module 'picorv32_pcpi_div' [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2415]
+INFO: [Synth 8-155] case statement is not full and has no default [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2440]
+INFO: [Synth 8-4471] merging register 'pcpi_wr_reg' into 'pcpi_ready_reg' [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2461]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_wr_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2461]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_pcpi_div' (14#1) [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:2415]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:332]
+INFO: [Synth 8-155] case statement is not full and has no default [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:332]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:403]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1117]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1247]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1247]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1264]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1264]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1264]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1310]
+INFO: [Synth 8-155] case statement is not full and has no default [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1310]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1481]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1481]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1493]
+INFO: [Synth 8-155] case statement is not full and has no default [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1493]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1579]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1623]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1623]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1731]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1762]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1832]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1832]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1840]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1840]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1855]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1855]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1880]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1880]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1897]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1897]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_firstword_reg_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:392]
+WARNING: [Synth 8-6014] Unused sequential element last_mem_valid_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:393]
+WARNING: [Synth 8-6014] Unused sequential element next_insn_opcode_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:433]
+WARNING: [Synth 8-6014] Unused sequential element mem_la_secondword_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:571]
+WARNING: [Synth 8-6014] Unused sequential element prefetched_high_word_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:572]
+WARNING: [Synth 8-6014] Unused sequential element q_ascii_instr_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:777]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_imm_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:778]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_opcode_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:779]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs1_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:780]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs2_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:781]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rd_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:782]
+WARNING: [Synth 8-6014] Unused sequential element dbg_next_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:783]
+WARNING: [Synth 8-6014] Unused sequential element dbg_valid_insn_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:786]
+WARNING: [Synth 8-6014] Unused sequential element cached_ascii_instr_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:791]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_imm_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:792]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_opcode_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:794]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs1_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:797]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs2_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:798]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rd_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:799]
+WARNING: [Synth 8-6014] Unused sequential element dbg_insn_addr_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:803]
+WARNING: [Synth 8-6014] Unused sequential element clear_prefetched_high_word_q_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1288]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rinst_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1401]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rdata_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1402]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_wdata_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1403]
+WARNING: [Synth 8-6014] Unused sequential element alu_out_0_q_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1405]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1408]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_2_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1409]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1412]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1413]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_valid_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1414]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_valid_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1415]
+WARNING: [Synth 8-6014] Unused sequential element next_irq_pending_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1435]
+WARNING: [Synth 8-6014] Unused sequential element decoder_trigger_q_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1442]
+WARNING: [Synth 8-6014] Unused sequential element decoder_pseudo_trigger_q_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1444]
+WARNING: [Synth 8-6014] Unused sequential element latched_trace_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1460]
+WARNING: [Synth 8-6014] Unused sequential element current_pc_reg was removed.  [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:1490]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (15#1) [/usr/local/lib/python3.6/dist-packages/pythondata_cpu_picorv32-1.0.post153-py3.6.egg/pythondata_cpu_picorv32/verilog/picorv32.v:62]
+WARNING: [Synth 8-7023] instance 'picorv32' of module 'picorv32' has 27 connections declared, but only 25 given [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:2139]
+WARNING: [Synth 8-6014] Unused sequential element Forma_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1645]
+WARNING: [Synth 8-6014] Unused sequential element PromedioColor_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1646]
+WARNING: [Synth 8-6014] Unused sequential element MapaData_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1650]
+WARNING: [Synth 8-6014] Unused sequential element MapaAddr_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1654]
+WARNING: [Synth 8-6014] Unused sequential element MapaWrite_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1658]
+WARNING: [Synth 8-6014] Unused sequential element buttons_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1667]
+WARNING: [Synth 8-6014] Unused sequential element scratch_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1689]
+WARNING: [Synth 8-6014] Unused sequential element bus_errors_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1690]
+WARNING: [Synth 8-6014] Unused sequential element _w_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1705]
+WARNING: [Synth 8-6014] Unused sequential element _r_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1706]
+WARNING: [Synth 8-6014] Unused sequential element infrarrojo_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1715]
+WARNING: [Synth 8-6014] Unused sequential element leds_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1727]
+WARNING: [Synth 8-6014] Unused sequential element ruedas_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1739]
+WARNING: [Synth 8-6014] Unused sequential element servo_radar_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1751]
+WARNING: [Synth 8-6014] Unused sequential element timer_load_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1784]
+WARNING: [Synth 8-6014] Unused sequential element timer_reload_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1788]
+WARNING: [Synth 8-6014] Unused sequential element timer_en_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1792]
+WARNING: [Synth 8-6014] Unused sequential element timer_value_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1797]
+WARNING: [Synth 8-6014] Unused sequential element timer_status_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1798]
+WARNING: [Synth 8-6014] Unused sequential element timer_enable_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1806]
+WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1836]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1837]
+WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1838]
+WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1846]
+WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1847]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1848]
+WARNING: [Synth 8-6014] Unused sequential element init_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1866]
+WARNING: [Synth 8-6014] Unused sequential element distancia_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1867]
+WARNING: [Synth 8-6014] Unused sequential element done_re_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:1868]
+WARNING: [Synth 8-6014] Unused sequential element storage_dat0_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:2034]
+WARNING: [Synth 8-6014] Unused sequential element storage_1_dat0_reg was removed.  [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:2055]
+INFO: [Synth 8-6155] done synthesizing module 'nexys4ddr' (16#1) [/home/gmojicar/Escritorio/Digital_II/Proyecto/Proyecto_Grupo_4/wp04-2021-2-gr04-main/SoC_project/build/nexys4ddr/gateware/nexys4ddr.v:20]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[24]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[23]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[22]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[21]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[20]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[19]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[18]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[17]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[16]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[15]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[11]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[10]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[9]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[8]
+WARNING: [Synth 8-3331] design picorv32_pcpi_div has unconnected port pcpi_insn[7]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[24]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[23]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[22]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[21]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[20]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[19]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[18]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[17]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[16]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[15]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[11]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[10]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[9]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[8]
+WARNING: [Synth 8-3331] design picorv32_pcpi_mul has unconnected port pcpi_insn[7]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_wr
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[31]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[30]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[29]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[28]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[27]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[26]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[25]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[24]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[23]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[22]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[21]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[20]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[19]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[18]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[17]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[16]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[15]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[14]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[13]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[12]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[11]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[10]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[9]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[8]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[7]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[6]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[5]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[4]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[3]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[2]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[1]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_rd[0]
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_wait
+WARNING: [Synth 8-3331] design picorv32 has unconnected port pcpi_ready
+WARNING: [Synth 8-3331] design ultrasonido has unconnected port init
+WARNING: [Synth 8-3331] design nexys4ddr has unconnected port Forma0
+WARNING: [Synth 8-3331] design nexys4ddr has unconnected port Forma1
+WARNING: [Synth 8-3331] design nexys4ddr has unconnected port PromedioColor0
+WARNING: [Synth 8-3331] design nexys4ddr has unconnected port PromedioColor1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1997.543 ; gain = 285.934 ; free physical = 6272 ; free virtual = 13263
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2015.355 ; gain = 303.746 ; free physical = 6276 ; free virtual = 13269
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2015.355 ; gain = 303.746 ; free physical = 6276 ; free virtual = 13269
+---------------------------------------------------------------------------------
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2021.293 ; gain = 0.000 ; free physical = 6344 ; free virtual = 13337
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Common 17-83] Releasing license: Synthesis
+98 Infos, 146 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+INFO: [Common 17-344] 'synth_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 11 15:12:33 2022...

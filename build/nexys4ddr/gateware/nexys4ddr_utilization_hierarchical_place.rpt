@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu Feb 10 20:04:55 2022
+| Date         : Fri Feb 11 15:33:46 2022
 | Host         : gmojicar-Lenovo-YOGA-520-14IKB running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -hierarchical -file nexys4ddr_utilization_hierarchical_place.rpt
 | Design       : nexys4ddr
@@ -21,22 +21,22 @@ Table of Contents
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
 |        Instance       |       Module      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| nexys4ddr             |             (top) |       3119 |       3007 |     112 |    0 | 1951 |     26 |      0 |            2 |
-|   (nexys4ddr)         |             (top) |        414 |        398 |      16 |    0 |  539 |     14 |      0 |            0 |
-|   CamaraVGADriver     |   CamaraVGADriver |        466 |        458 |       8 |    0 |  193 |     12 |      0 |            2 |
+| nexys4ddr             |             (top) |       3129 |       3017 |     112 |    0 | 1961 |     26 |      0 |            2 |
+|   (nexys4ddr)         |             (top) |        418 |        402 |      16 |    0 |  540 |     14 |      0 |            0 |
+|   CamaraVGADriver     |   CamaraVGADriver |        468 |        460 |       8 |    0 |  193 |     12 |      0 |            2 |
 |     (CamaraVGADriver) |   CamaraVGADriver |          0 |          0 |       0 |    0 |    6 |      0 |      0 |            2 |
-|     Cam               |            OV7670 |        324 |        324 |       0 |    0 |  164 |      0 |      0 |            0 |
+|     Cam               |            OV7670 |        325 |        325 |       0 |    0 |  164 |      0 |      0 |            0 |
 |     Camara            |          ImBuffer |          1 |          1 |       0 |    0 |    0 |     12 |      0 |            0 |
 |     Mapa              |        ImBufferv2 |         16 |          8 |       8 |    0 |    4 |      0 |      0 |            0 |
-|     VGA               | VGA_Driver640x480 |        125 |        125 |       0 |    0 |   19 |      0 |      0 |            0 |
+|     VGA               | VGA_Driver640x480 |        126 |        126 |       0 |    0 |   19 |      0 |      0 |            0 |
 |     clk25_24          |   clk24_25_nexys4 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |            0 |
-|   picorv32            |          picorv32 |       2098 |       2010 |      88 |    0 | 1129 |      0 |      0 |            0 |
-|     (picorv32)        |          picorv32 |       1380 |       1292 |      88 |    0 |  674 |      0 |      0 |            0 |
-|     pcpi_div          | picorv32_pcpi_div |        388 |        388 |       0 |    0 |  200 |      0 |      0 |            0 |
+|   picorv32            |          picorv32 |       2107 |       2019 |      88 |    0 | 1129 |      0 |      0 |            0 |
+|     (picorv32)        |          picorv32 |       1389 |       1301 |      88 |    0 |  674 |      0 |      0 |            0 |
+|     pcpi_div          | picorv32_pcpi_div |        387 |        387 |       0 |    0 |  200 |      0 |      0 |            0 |
 |     pcpi_mul          | picorv32_pcpi_mul |        331 |        331 |       0 |    0 |  255 |      0 |      0 |            0 |
 |   ruedas              |            ruedas |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
 |   servo_radar         |       servo_radar |         34 |         34 |       0 |    0 |   22 |      0 |      0 |            0 |
-|   ultrasonido         |       ultrasonido |        105 |        105 |       0 |    0 |   64 |      0 |      0 |            0 |
+|   ultrasonido         |       ultrasonido |        100 |        100 |       0 |    0 |   73 |      0 |      0 |            0 |
 +-----------------------+-------------------+------------+------------+---------+------+------+--------+--------+--------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
